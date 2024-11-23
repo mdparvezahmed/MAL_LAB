@@ -24,12 +24,7 @@ main proc
     
     mov dl,bl
     mov ah,2h
-    int 21h
-    
-    
-    
-    
-    
+    int 21h     
          
     mov ah,4ch
     int 21h
