@@ -38,18 +38,18 @@ main proc
     sub al, 48
     mov num2, al
     
-    mov al, num1
-    mov bl, num2
-    cmp al, bl
+    mov bl, num1
+    mov bh, num2
+    cmp bl, bh
     jg num1_is_larger
                      
     
-    mov al,bl
+    mov bl,bh
     jmp print_result
                  
  
 num1_is_larger:
-    mov al, num1 
+    mov bl, num1 
     
     
 print_result:
@@ -58,10 +58,10 @@ print_result:
     lea dx,msg3
     int 21h
     
-    add al,48
+    add bl,48
     
     mov ah,2
-    mov dl,al
+    mov dl,bl
     int 21h
     
     mov ah,4ch
